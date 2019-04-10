@@ -8,7 +8,6 @@ from openpyxl import load_workbook
 from VBaseFunctions import *
 
 bPath="/Users/Stella/Documents/Ph.D. Research/Code/output"
-#bPath="/Users/Stella/Documents/Ph.D. Research/Testing/Single-Model-Testing/Output"
 bFileName="vocab_Base.xlsx"
 bFile=bPath+"/"+bFileName
 bwb=load_workbook(filename=bFile)
@@ -54,9 +53,14 @@ while (nextVocabRow < maxRow):
 					chkIndex='A'+str(processRow)
 		
 					if (link == mws[chkIndex].value):
+						fBase5Star=True
 						uIndex='C'+str(pBVocabInfo.retLinksDict[link])
 						if (bws[uIndex] != "Yes"):
 							bws[uIndex]="Yes"
+
+						uIndex='C'+str(pBVocabInfo.retBaseDict[pVocab])
+						if (bws[uIndex] != "Yes"):
+							bws[uIndex]="Yes"	
 						
 					processRow += 1
 

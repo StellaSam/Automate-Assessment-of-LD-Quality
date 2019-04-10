@@ -14,7 +14,6 @@ def chkCurrentWriteRow(row):
 	return(row)
 
 fPath="/Users/Stella/Documents/Ph.D. Research/Code/output"
-#fPath="/Users/Stella/Documents/Ph.D. Research/Testing/Single-Model-Testing/Output"
 bFileName="vocab_Base.xlsx"
 bFile=fPath+"/"+bFileName
 bwb=load_workbook(filename=bFile)
